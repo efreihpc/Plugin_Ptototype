@@ -6,10 +6,13 @@ import backend.model.service.ServiceEntity;
 
 @Extension
 public class PluggedInService2 extends ServiceEntity<SimpleResult>{
-
+	
+	public PluggedInService2()
+	{
+		commonName("Plugged In Service 2 - " + this.getClass().getPackage().getName());
+	}
 	@Override
 	public void execute() {
-		commonName("Plugged In Service 2");
 		
 	}
 
