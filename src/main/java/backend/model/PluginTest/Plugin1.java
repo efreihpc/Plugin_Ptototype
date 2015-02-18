@@ -18,29 +18,5 @@ public class Plugin1 extends Plugin{
 		// TODO Auto-generated method stub
 
 	}
-	
-	@Extension
-	public static class PluggedInServiceProvider extends GenericServiceProvider{
-
-		public PluggedInServiceProvider()
-		{
-			commonName("Plugged In Service Provider");
-		}
-	}
-	
-	@Extension
-	public static class PluggedInService extends ServiceEntity<SimpleResult> {
-
-		public PluggedInService()
-		{
-			commonName("Plugged In Service");
-		}
-		
-		@Override
-		public void execute() {
-			
-		}
-
-	}
 
 }
