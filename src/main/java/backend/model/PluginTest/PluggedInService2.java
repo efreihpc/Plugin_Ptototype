@@ -1,16 +1,23 @@
 package backend.model.PluginTest;
 
+import javax.persistence.Entity;
+
+import org.springframework.transaction.annotation.Transactional;
+
 import ro.fortsoft.pf4j.Extension;
 import backend.model.result.SimpleResult;
 import backend.model.service.ServiceEntity;
+import backend.model.service.ServicePlugin;
 import backend.model.serviceprovider.GenericServiceProvider;
 
 @Extension
-public class PluggedInService2 extends ServiceEntity<SimpleResult>{
+@Entity
+@Transactional
+public class PluggedInService2 extends ServicePlugin<SimpleResult>{
 	
 	public PluggedInService2()
 	{
-		commonName("Plugged In Service 2 - " + this.getClass().getPackage().getName());
+		commonName("Plugged In Service 2 - ");
 	}
 	@Override
 	public void execute() {
