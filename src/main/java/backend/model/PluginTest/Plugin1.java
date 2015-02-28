@@ -1,13 +1,9 @@
 package backend.model.PluginTest;
-import backend.model.result.SimpleResult;
-import backend.model.service.ServiceEntity;
-import backend.model.serviceprovider.GenericServiceProvider;
-import ro.fortsoft.pf4j.Extension;
-import ro.fortsoft.pf4j.Plugin;
 import ro.fortsoft.pf4j.PluginWrapper;
+import backend.model.RegisteringPlugin;
 
 
-public class Plugin1 extends Plugin{
+public class Plugin1 extends RegisteringPlugin{
 
 	public Plugin1(PluginWrapper wrapper) {
 		super(wrapper);

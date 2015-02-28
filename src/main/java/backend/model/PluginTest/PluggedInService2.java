@@ -6,7 +6,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import ro.fortsoft.pf4j.Extension;
 import backend.model.result.SimpleResult;
-import backend.model.service.ServiceEntity;
 import backend.model.service.ServicePlugin;
 import backend.model.serviceprovider.GenericServiceProvider;
 
