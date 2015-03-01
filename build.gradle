@@ -14,9 +14,23 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
 
-jar {
+// jar {
+//   baseName = 'HPC-Plugin'
+//   version = '0.1.0'
+// }
+
+task plugin(type: Jar) {
+  manifest {
+    attributes 'Plugin-Class' : 'backend.model.PluginPrototype.Prototype',
+      'Plugin-Id' : 'PluginPrototype',
+      'Plugin-Version' : '1.0',
+      'Plugin-Provider' : 'Yannick Bäumer'
+  }
   baseName = 'HPC-Plugin'
   version = '0.1.0'
+  into('classes')
+  extension('zip')
+  with jar
 }
 
 repositories {

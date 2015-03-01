@@ -1,4 +1,4 @@
-package backend.model.PluginTest;
+package backend.model.PluginPrototype;
 
 import javax.persistence.Entity;
 
@@ -12,18 +12,25 @@ import backend.model.serviceprovider.GenericServiceProvider;
 @Extension
 @Entity
 @Transactional
-public class PluggedInService2 extends ServicePlugin<SimpleResult>{
+public class PluggedInService extends ServicePlugin<SimpleResult>{
 	
-	public PluggedInService2()
+	public PluggedInService()
 	{
-		commonName("Plugged In Service 2 - ");
+		commonName("Plugged In Service");
 	}
 	@Override
 	public void execute() {
-		try {
+		try 
+		{
 			GenericServiceProvider provider = serviceProviderRepository().serviceProvider("b80b17302e4da7adc8599b9fb302a3b48cbee13e");
-			System.out.println(provider.commonName());
-		} catch (InstantiationException | IllegalAccessException e) {
+			
+			if(provider != null)
+				System.out.println(provider.commonName());
+			else
+				System.out.println("ServiceProvider not found");
+			
+		}
+		catch (InstantiationException | IllegalAccessException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

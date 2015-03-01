@@ -1,11 +1,11 @@
-package backend.model.PluginTest;
+package backend.model.PluginPrototype;
 import ro.fortsoft.pf4j.PluginWrapper;
 import backend.model.RegisteringPlugin;
 
 
-public class Plugin1 extends RegisteringPlugin{
+public class Prototype extends RegisteringPlugin{
 
-	public Plugin1(PluginWrapper wrapper) {
+	public Prototype(PluginWrapper wrapper) {
 		super(wrapper);
 		// TODO Auto-generated constructor stub
 	}
